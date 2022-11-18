@@ -1,0 +1,36 @@
+
+<div class="background-image"></div>
+<div class="title">
+  <h3 class="center-align grey-text">Bienvenido a PlayTimePets</h3>
+</div>
+<div class="row">
+  <div class="col s12 l4 offset-l4">
+    <div class="card grey lighten-3">
+      <div class="card-content">
+        <h4 class="card-title center-align">Login</h4>
+        <form [formGroup]="dataForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input formControlName="usuario" type="email" id="email" class="validate" />
+              <label for="email">pepito@ejemplo.com</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">vpn_key</i>
+              <input formControlName="contrasena" type="password" id="password" class="validate" />
+              <label for="email">Contraseña</label>
+            </div>
+          </div>
+          <div class="row center-align">
+            <button [disabled]="!dataForm.valid" class="btn waves-effect waves-light blue" type="button" (click)="Login()" name="action">Iniciar sesión
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          <li><a routerLink="/inicio">Registrate</a></li>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
