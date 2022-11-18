@@ -1,23 +1,47 @@
+<html>
 
-<nav>
-    <div class="nav-wrapper blue">
-      <a href="#!" class="brand-logo">Logo</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PlayTime Pets</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-wrapper blue">
+    <div class="container">
+      <img class="responsive-img" src="./images/Logo-PlayTimePets.jpg">
+      <a href="#!" class="brand-logo">PlayTime Pets</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a routerLink="/inicio">Inicio</a></li>
         <li><a routerLink="badges.html">Sobre Nosotros</a></li>
         <li><a routerLink="collapsible.html">Planes</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">LOG IN</a></li>
+        <li *ngIf="!seInicioSesion" class="btn green"><a routerLink="/seguridad/identificar">LOG IN</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">LOG OUT</a></li>
       </ul>
     </div>
-    
+
+
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li *ngIf="seInicioSesion"><a routerLink="/inicio">Inicio</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="badges.html">Sobre Nosotros</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="collapsible.html">Planes</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/identificar">LOG IN</a></li>
-    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">LOG OUT</a></li>
+    <li><a routerLink="/inicio">Inicio</a></li>
+    <li><a routerLink="badges.html">Sobre Nosotros</a></li>
+    <li><a routerLink="collapsible.html">Planes</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">LOG IN</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">LOG OUT</a></li>
   </ul>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+</body>
+
+</html>
