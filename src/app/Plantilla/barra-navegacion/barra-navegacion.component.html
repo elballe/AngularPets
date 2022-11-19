@@ -11,19 +11,21 @@
 </head>
 
 <body>
-  <nav class="nav-wrapper blue">
+  <nav class="nav-wrapper light-blue">
     <div class="container">
-      <img class="brand-logo cols1" src="/assets/Images/Logo-PlayTimePets.jpg">
+      <img class="small-img" src="/s/Images/Logo-PlayTimePets.jpg">
       <a href="#!" class="brand-logo">PlayTime Pets</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a routerLink="/inicio">Inicio</a></li>
         <li><a routerLink="badges.html">Sobre Nosotros</a></li>
         <li><a routerLink="collapsible.html">Planes</a></li>
-        <li *ngIf="!seInicioSesion" class="btn green"><a routerLink="/seguridad/identificar">LOG IN</a></li>
+        <li *ngIf="!seInicioSesion"  class="light-green"><a routerLink="/seguridad/identificar">LOG IN</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">LOG OUT</a></li>
       </ul>
     </div>
+
+
   </nav>
 
   <ul class="sidenav" id="mobile-demo">

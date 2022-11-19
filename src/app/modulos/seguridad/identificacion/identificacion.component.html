@@ -1,10 +1,9 @@
-
 <div class="background-image"></div>
 <div class="title">
   <h3 class="center-align grey-text">Bienvenido a PlayTimePets</h3>
 </div>
 <div class="row">
-  <div class="col s12 l4 offset-l4">
+  <div class="col-4 offset-4">
     <div class="card grey lighten-3">
       <div class="card-content">
         <h4 class="card-title center-align">Login</h4>
@@ -23,12 +22,21 @@
               <label for="email">Contraseña</label>
             </div>
           </div>
-          <div class="row center-align">
-            <button [disabled]="!dataForm.valid" class="btn waves-effect waves-light blue" type="button" (click)="Login()" name="action">Iniciar sesión
+          <div class="center-align">
+            <button [disabled]="!dataForm.valid" class=" btn waves-effect waves-light green" type="button"
+              (click)="Login()" name="action">Iniciar sesión
               <i class="material-icons right">send</i>
             </button>
           </div>
-          <li><a routerLink="/inicio">Registrate</a></li>
+          <div class="section">
+            <div class="col s8">
+              <li><a routerLink="/inicio">¿Olvidaste tu contraseña?</a></li>
+            </div>
+            <div class="col s4">
+              <li><a routerLink="/inicio">Registrate</a></li>
+            </div>
+          </div>
+          
         </form>
       </div>
     </div>
