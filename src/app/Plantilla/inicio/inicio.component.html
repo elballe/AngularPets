@@ -14,15 +14,15 @@
 
     <div class="container">
         <h3 class="blue-text">Bienvenido a PlayTime Pets</h3>
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="\images\slide\Imagen1.jpg"></a>
-          </div>
+        <img class="responsive-img" src="">
+    </div>
+    <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="https://images.pexels.com/photos/8498519/pexels-photo-8498519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></a>
     </div>
     <div class="col s12 m7">
         <div class="card horizontal">
             <div class="card-image">
-                <img
-                    src="https://images.pexels.com/photos/8734460/pexels-photo-8734460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <img class="responsive-img" src="https://localhost:4200/src/images/Logo-PlayTimePets.jpg">
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -60,10 +60,10 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();
-        });
 
+        var instance = M.Carousel.init({
+            fullWidth: true
+        });
     </script>
 </body>
 

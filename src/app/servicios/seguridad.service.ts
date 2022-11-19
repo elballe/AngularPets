@@ -33,7 +33,7 @@ ObtenerDatosUsuarioEnSesion(){
 }
 
 Identificar(usuario: string, contrasena: string): Observable<ModeloIdentificar>{
-  return this.http.post<ModeloIdentificar>('http://localhost:3000/identificarUsuario' , {
+  return this.http.post<ModeloIdentificar>(`${this.url}/identificarUsuario` , {
     usuario: usuario,
     contrasena: contrasena
   },{
@@ -69,5 +69,14 @@ EliminarInformacionSesion(){
 SeHaIniciadoSesion(){
   let datosString = localStorage.getItem("datosSesion");
   return datosString;
+}
+ObtenerToken(){
+  let datosString = localStorage.getItem("datosSesion");
+  if (datosString){
+    let datos = JSON.parse(datosString);
+    return datos.tk;
+  }else{
+    return '';
+  }
 }
 }
