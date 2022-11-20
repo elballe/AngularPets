@@ -6,109 +6,464 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PlayTime Pets</title>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
-        <h3 class="blue-text">Bienvenido a PlayTime Pets</h3>
-        <img class="responsive-img" src="">
-    </div>
-    <div class="row">
-        <div class="col-4 ">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/assets/Images/Planes/Oro.png">
-                    <span class="card-title">Card Title</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/assets/Images/Planes/Plata.png">
-                    <span class="card-title">Card Title</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/assets/Images/Planes/Bronce.png">
-                    <span class="card-title">Card Title</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m7">
-        <div class="card horizontal">
-            <div class="card-image col-5">
-                <img class="responsive-img" src="/assets/Images/img1.jpg">
-            </div>
-            <div class="card-stacked col-5">
-                <div class="card-content">
-                    <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                        <h3 class="mb-4 blue-text">¡Escribenos!</h3>
+    <main>
 
-                        <div class="col-lg-12">
-                            <div class="">
-                                <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                    placeholder="Nombres" required>
+        <!--INICIO SECCIÓN CARRUSEL -->
+
+        <section class="hero-section hero-section-full-height">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 p-0">
+                        <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/assets/Images/slide/Imagen1.jpg" class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>Cuida a tu <br> mejor amigo</h1>
+
+                                        <p>El mejor servicio para tu mascota</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="/assets/Images/slide/Imagen2.jpg" class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>Aqui <br> ciudamos <br> a tu mejor amigo</h1>
+
+                                        <p>Pregunta por los planes que tenemos para tu amigo</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="/assets/Images/slide/Imagen3.jpg" class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>Veterianaria</h1>
+
+                                        <p>Los mejores expertos <br> para velar por la salud de tu compañero</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="">
-                                <input type="email" name="volunteer-email" id="volunteer-email" pattern="[^ @]*@[^ @]*"
-                                    class="form-control" placeholder="Correo Electrónico" required>
-                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
 
-                            <div class="col-lg-12 col-12">
-                                <input type="text" name="volunteer-subject" id="volunteer-subject" class="form-control"
-                                    placeholder="Asunto" required>
+                            <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--FIN SECCIÓN CARRUSEL -->
+
+        <!--SECCIÓN DE NUSTROS SERVICIOS-->
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10 col-12 text-center mx-auto">
+                        <h2 class="mb-5">Nuestros Servicios</h2>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="/assets/Images/icons/veterinario.jpg" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Veterinario</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="/assets/Images/icons/paseador.jpg" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Paseador</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="/assets/Images/icons/guarderia.jpg" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Guarderia</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="/assets/Images/icons/entrenador.jpg" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Entrenador</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--FIN SECCIÓN NUESTROS SERVICIOS-->
+
+        <!--INICIO SECCIÓN NOSOTROS -->
+
+        <section class="section-padding section-bg" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                        <img src="/assets/Images/img1.jpg"
+                            class="custom-text-box-image img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-text-box">
+                            <h2 class="mb-2">Sobre Nosotros</h2>
+
+                            <h5 class="mb-3">PLAYTIEM PETS</h5>
+
+                            <p class="mb-0">Somo una clínica veterinaria con mayor presencia en Bogotá, considerados
+                                como una EPS para máscotas. Apoyamos a todos los amantes a los animales prestandoles
+                                servicios increibles y de fácil acceso a todos, para que así puedas mantener de la mejor
+                                manera a tu amigo peludo, especializados en Gatos y Perros.</p>
+                            <br>
+                            <p class="mb-0">En nuestra veterinaría encontrarás productos desde la gama económica a la
+                                súper premium. Todo un universo de soluciones para tu mascota.</p>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-lg-6 cols-md-5 col-12">
+                                <div class="custom-text-box mb-lg-0">
+                                    <h5 class="mb-3">Misión</h5>
+
+                                    <p>Ser la clínica veterinaria referente entregando servicios inclusivos donde
+                                        nuestras mascotas encuentren todo lo necesario para su salud y desarrollo.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
-                            placeholder="Escribe aquí tu mensaje..."></textarea>
+                        <div class="row">
+                            <div class="col-lg-6 cols-md-5 col-12">
+                                <div class="custom-text-box mb-lg-0">
+                                    <h5 class="mb-3">Visión</h5>
 
-                        <button type="button" class="btn blue">Enviar</button>
-                    </form>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
+                                    <p>Ser la clínica veterinaria número 1 en colombia, creando servicios inclusivos
+                                        donde cualquier amante a los animales escuentre apoyo en todo aspecto de la vida
+                                        de su mascota.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script>
+        <!--FIN SECCIÓN NOSOTROS-->
 
-        var instance = M.Carousel.init({
-            fullWidth: true
-        });
-    </script>
+        <!-- INICIO SECCIÓN SUSCRIBETE -->
+
+        <section class="cta-section section-padding section-bg">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+
+                    <div class="col-lg-5 col-12 ms-auto">
+                        <h2 class="mb-0">Se parte de nosotros<br> unete a nuestros planes.</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <a href="#" class="me-4">Suscribete</a>
+
+                        <a href="#section_4" class="custom-btn btn smoothscroll">UNETENOS</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FIN SECCIÓN SUSCRIBETE -->
+
+        <!-- INICIO SECCIÓN PLANES -->
+
+        <section class="section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center mb-4">
+                        <h2>Nuestros PLANES</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="/assets/Images/Planes/Bronce.png" class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    <h5 class="mb-3">Plan BRONCE</h5>
+
+                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
+
+                                    <div>
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+
+                                        <p class="ms-auto mb-0">
+                                            <strong>Valor:</strong>
+                                            $32.000
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Unirme</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="/assets/Images/Planes/Plata.png" class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    <h5 class="mb-3">Plan PLATA</h5>
+
+                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                        tempor</p>
+
+                                    <div>
+                                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="ms-auto mb-0">
+                                            <strong>Valor:</strong>
+                                            $45.000
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Unirme</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="custom-block-wrap">
+                            <img src="/assets/Images/Planes/Oro.png" class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    <h5 class="mb-3">Plan ORO</h5>
+
+                                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                    </p>
+
+                                    <div>
+                                        <div class="progress-bar w-100" role="progressbar" aria-valuenow="100"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="ms-auto mb-0">
+                                            <strong>Valor:</strong>
+                                            $60.000
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Unirme</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN DE LA SECCION PLANES -->
+
+
+        <!-- INICION SECCION TESTIMONIOS -->
+        <section class="testimonial-section section-padding section-bg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="mb-lg-3">Nuestros Clientes</h2>
+
+                        <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+
+                            <!-- COMENTARIO 1 -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Llevo menos de un año con ellos y siempre me
+                                            sorprende mucho la atención y sus profesionalismo</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Maria</span>,
+                                            Velandia</small>
+                                    </div>
+                                </div>
+                                <!-- COMENTARIO 2 -->
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">100% Satisfecho con todos los colaboradores de esta
+                                            gran Veterianaria</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Thomas</span>,
+                                            Betancourt</small>
+                                    </div>
+                                </div>
+                                <!-- COMENTARIO 3 -->
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">No solo encontre un veterinario, encontre apoyo para
+                                            cuando debo dejar a mi amigo al ciudado</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Luisa</span>,
+                                            Rodríguez</small>
+                                    </div>
+                                </div>
+                                <!-- COMENTARIO 4 -->
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Encuentras desde el veterinario, como los productos y
+                                            servicios para el ciudado y atención de tu amigo peludo</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Luis</span>,
+                                            Blanco</small>
+                                    </div>
+                                </div>
+                                <!-- INICIO CARRUSEL TESTIMONIOS -->
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                        <img src="/assets/Images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                        <img src="/assets/Images/avatar/portrait-young-redhead-bearded-male.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                        <img src="/assets/Images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                        <img src="/assets/Images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+                                </ol>
+                                <!-- FIN SECCIÓN CARRUSEL TESTIMONIOS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="volunteer-section section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-4">Contactanos</h2>
+
+                        <!--INICIO FORMULARIO SECCION CONTACTANOS -->
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                            <h3 class="mb-4">¡Escribenos!</h3>
+
+                            <div class="row">
+                                <div class="col-lg-12 col-12">
+                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
+                                        placeholder="Nombres" required>
+                                </div>
+
+                                <div class="col-lg-12 col-12">
+                                    <input type="email" name="volunteer-email" id="volunteer-email"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo Electrónico"
+                                        required>
+                                </div>
+
+                                <div class="col-lg-12 col-12">
+                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                        class="form-control" placeholder="Asunto" required>
+                                </div>
+                            </div>
+
+                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                                placeholder="Escribe aquí..."></textarea>
+
+                            <button type="submit" class="form-control">Enviar</button>
+                        </form>
+                    </div>
+                    <!--FIN FORMULARIO SECCION CONTACTANOS -->
+
+
+                    <div class="col-lg-6 col-12">
+                        <img src="/assets/Images/Logo-PlayTimePets.jpg" class="volunteer-image img-fluid" alt="LOGO">
+
+                        <div class="custom-block-body text-center">
+                            <h4 class="text-white mt-lg-3 mb-lg-3">Siguenos en nuestras <strong>REDES</strong></h4>
+
+                            <div class="col-lg-12 col-12 ms-auto d-lg-block d-none">
+                                <ul class="text-white">
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-facebook"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-instagram"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-youtube"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a><i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN SECCION CONTACTANOS -->
+
+    </main>
 </body>
 
 </html>

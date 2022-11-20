@@ -1,4 +1,132 @@
-<html>
+<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/Images/Logo-PlayTimePets.jpg" class="logo img-fluid" alt="LOGO">
+                <span>
+                    PlayTime Pets
+                    <small>Todo para tú mejor amigo</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#top">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">Quienes somos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">Planes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_6">Contactanos</a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+
+                        <div class="container">
+
+                            <a class="nav-link custom-btn custom-border-btn btn"  data-bs-toggle="modal" href="#ventanaIngresar">Ingresar</a>
+                            
+<!------------------------INICIO FORMULARIO INICIAR SESION - MUDULO ------------------------>
+                            <div class="modal" id="ventanaIngresar">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header mx-auto">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <img src="images/Logo-PlayTimePets.jpg" class="img-thumbnail rounded logoModal" alt="LOGO">
+                                            <h5 class="modal-title tituloModal">Iniciar Sesion</h5>
+                                        </div>
+                                        <div class="modal-body cuerpoModal">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="floatingInput" placeholder="Correo electrónico">
+                                                <label for="floatingInput">Correo electrónico</label>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                                                <label for="floatingPassword">Contraseña</label>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-primary">Iniciar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN FORMULARIO INICIAR SESION - MUDULO-->
+                        </div>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <div class="container">
+
+                            <a class="nav-link custom-btn custom-border-btn btn" href="#ventanaRegistrarse" data-bs-toggle="modal">Registrarse</a>
+
+                            <!--INICIO FORMULARIO INICIAR REGISTRARSE - MUDULO-->
+                                <div class="modal fade" id="ventanaRegistrarse">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <img src="images/Logo-PlayTimePets.jpg" class="logoModal" alt="LOGO">
+                                                <h5 class="modal-title">Regristrarse</h5>
+                                                
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="row g-3 needs-validation" novalidate="">
+                                                    <div class="col-md-6">
+                                                        <label for="txtNombres" class="form-label">Nombres</label>
+                                                        <input type="text" class="form-control" id="txtNombres" required="">
+                                                        <div class="invalid-feedback">¡Este campo es requerido!</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="txtApellidos" class="form-label">Apellidos</label>
+                                                        <input type="text" class="form-control" id="txtApellidos" required="">
+                                                        <div class="valid-feedback">¡Este campo es requerido!</div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label for="txtCorreo" class="form-label">Correo electrónico</label>
+                                                        <div class="input-group has-validation">
+                                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                            <input type="text" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required="">
+                                                            <div class="invalid-feedback">Por favor ingrese un correo electrónico</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="txtCelular" class="form-label">Celular</label>
+                                                        <input type="text" class="form-control" id="txtCelular" required="">
+                                                        <div class="invalid-feedback">Ingrese un número de celular</div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                    </div>
+                                                </form>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                <br>
+                                                <button class="btn btn-primary" type="submit">Registrarse</button>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!--FIN FORMULARIO REGISTRARSE - MUDULO-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <html>
 
 <head>
   <meta charset="UTF-8">
@@ -41,7 +169,10 @@
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();
     });
+    
   </script>
 </body>
 
 </html>
+    <!--FIN DEL NAVBAR -->
+    <main>

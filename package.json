@@ -20,6 +20,7 @@
     "@angular/router": "^14.2.0",
     "@types/crypto-js": "^4.1.1",
     "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2",
     "crypto-js": "^4.1.1",
     "cryptojs": "^2.5.3",
     "materialize-css": "^1.0.0-rc.2",

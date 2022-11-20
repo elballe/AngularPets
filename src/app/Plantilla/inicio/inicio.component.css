@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    grid-template-columns:auto auto auto;
+    width: 100%;
+    border: 100px;
+
+
+}
+
+html {
+    display: table;
+    margin: 2%;
+}
+
+.grid-container div{
+    display: inline-grid;
+}
