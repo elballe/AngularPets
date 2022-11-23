@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from '../modelos/identificar.modelo';
-import { CrearUsuarioComponent } from '../modulos/administracion/usuarios/crear-usuario/crear-usuario.component';
 
 @Injectable({
   providedIn: 'root'

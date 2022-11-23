@@ -1,7 +1,7 @@
 <div class="row">
     <h3 class="center-align">Crear Usuario</h3>
     <article class="col s6 offset-s3">
-      <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario()" action="">
+      <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario ()" action="">
             <div class="input field">
                 <input formControlName="cedula" type="text" name="cedula" required>
                 <label for="cedula">Cédula</label>
@@ -25,7 +25,8 @@
             <div class="col s12">
                 <select formControlName="rol" style="display: block;">
                     <option value="cliente">Cliente</option>
-                    <option value="administrador">Administrador</option>
+                    <option value="administrador">Admin</option>
+                    <option value="administrador">Asesor</option>
                 </select>
             </div>
             <button [disabled]="fgValidador.invalid" class="btn btn-primary" type="submit">Crear</button>

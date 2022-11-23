@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Action } from 'rxjs/internal/scheduler/Action';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({
   selector: 'app-eliminar-usuario',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarUsuarioComponent implements OnInit {
 
-  constructor() { }
+  id: string = "";
+
+  constructor(private usuarioService : UsuarioService,
+    private router : Router,
+    private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params["id"];
+  }
+
+  EliminarUsuario(){
+    this.usuarioService.EliminarUsuario(this.id).subscribe(
+      (datos)=>{
+        alert("Registro eliminado correctamente");
+        this.router.navigate(["/administracion/buscar-usuario"]);
+      },
+      (error) =>{
+        alert("Error elmininando el registro");
+      }
+    )
   }
 
 }

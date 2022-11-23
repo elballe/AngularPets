@@ -19,7 +19,7 @@
                         <a class="nav-link click-scroll" href="#top">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" routerLink="/administracion/listar-usuario">Usuarios</a>
+                        <a class="nav-link click-scroll" *ngIf="rol == 'cliente'" routerLink="/administracion/buscar-usuario">Usuarios</a>
                     </li>
 
                     <li class="nav-item">
