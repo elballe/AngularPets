@@ -20,7 +20,7 @@ export class UsuarioService {
     return this.http.get<ModeloUsuario[]>(`${this.url}/usuarios`);
   }
 
-  CrearUsuario(usuario=ModeloUsuario): Observable<ModeloUsuario>{
+  CrearUsuario(usuario: ModeloUsuario): Observable<ModeloUsuario>{
     return this.http.post<ModeloUsuario>(`${this.url}/usuarios`, usuario, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
@@ -28,19 +28,24 @@ export class UsuarioService {
     })
   }
 
-  ActualizarUsuario(usuario=ModeloUsuario): Observable<ModeloUsuario>{
-    return this.http.put<ModeloUsuario>(`${this.url}/usuarios`, usuario, {
+  ActualizarUsuarioPorId(id: string, usuario: ModeloUsuario): Observable<ModeloUsuario>{
+    return this.http.put<ModeloUsuario>(`${this.url}/usuarios/${id}`, usuario, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
     })
   }
 
-  EliminarUsuario(id: string): Observable<ModeloUsuario>{
-    return this.http.delete<ModeloUsuario>(`${this.url}/usuarios/${id}`, {
+  EliminarUsuario(id: string): Observable<any>{
+    return this.http.delete(`${this.url}/usuarios/${id}`, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
+    })
+  }
+  ObtenerRegistroPorId(id: string): Observable<ModeloUsuario>{
+    return this.http.get(`${this.url}/usuarios/${id}`, {
+      
     })
   }
 }

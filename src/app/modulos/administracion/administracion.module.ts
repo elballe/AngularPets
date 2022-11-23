@@ -18,6 +18,7 @@ import { CrearProductoComponent } from './productos/crear-producto/crear-product
 import { EliminarProductoComponent } from './productos/eliminar-producto/eliminar-producto.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
 import { BuscarProductoComponent } from './productos/buscar-producto/buscar-producto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -41,7 +42,9 @@ import { BuscarProductoComponent } from './productos/buscar-producto/buscar-prod
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

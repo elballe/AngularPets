@@ -9,17 +9,25 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
 })
 export class BuscarUsuarioComponent implements OnInit {
 
-listadoRegistros: ModeloUsuario[] = [];
+listadoUsuarios: ModeloUsuario[] = [];
 
   constructor(private usuarioServicio: UsuarioService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoUsuarios();
   }
 
   ObtenerListadoUsuarios(){
-    this.usuarioServicio.ObtenerDatos().subscribe(( datos: ModeloUsuario[]) => {
-      this.listadoRegistros = datos;
-    })
+    this.usuarioServicio.ObtenerDatos().subscribe(
+      (resultado) => {
+        this.listadoUsuarios = resultado;
+      },
+      (error) => {
+        console.log(error);
+
+      }
+    ); 
   }
+  
 
 }

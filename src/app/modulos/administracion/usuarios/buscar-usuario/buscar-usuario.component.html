@@ -1,4 +1,6 @@
-<table class="table responsive">
+<br>
+<button class="btn" routerLink="/administracion/crear-usuario">Nuevo</button>
+<table class="table responsive striped">
     <thead>
         <tr>
             <th>
@@ -25,10 +27,13 @@
             <th>
                 Editar
             </th>
+            <th>
+                Borrar
+            </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p for listadoRegistros">
+        <tr *ngFor="let p of listadoUsuarios">
             <td>
                 {{p.cedula}}
             </td>
@@ -36,7 +41,7 @@
                 {{p.nombre}}
             </td>
             <td>
-                {{p.apellidos}}
+                {{p.apellido}}
             </td>
             <td>
                 {{p.telefono}}
@@ -45,11 +50,15 @@
                 {{p.correo}}
             </td>
             <td>
-                {{p.nombre}}
+                {{p.contrasena}}
             </td>
             <td>
-                {{p.nombre}}
+                {{p.rol}}
             </td>
+            <td>
+                <a routerLink="/administracion/editar-usuario/{{p.id}}">Editar</a>
+            </td>
+            <td><a routerLink="/administracion/eliminar-usuario/{{p.id}}">Borrar</a></td>
 
         </tr>
     </tbody>
