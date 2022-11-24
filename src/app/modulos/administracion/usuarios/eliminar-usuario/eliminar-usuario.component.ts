@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Action } from 'rxjs/internal/scheduler/Action';
 import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({

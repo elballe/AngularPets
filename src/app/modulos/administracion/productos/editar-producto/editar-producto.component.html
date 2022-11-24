@@ -1,1 +1,36 @@
-<p>editar-producto works!</p>
+<div class="row">
+    <h3 class="center-aling">Crear Productos</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgvalidador" (ngSubmit)="Editarproducto()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id"/>
+           
+            <div class="input-field">
+                <label for="tipo"class="active">Tipo</label>
+                <input formControlName = "tipo" type="text" name="tipo" required>
+            </div>
+
+            <div class="input-field">
+                <label for="nombre"class="active">Nombre</label>
+                <input formControlName = "nombre" type="text" name="nombre" required>
+            </div>
+
+            <div class="input-field">
+                <label for="descripcion"class="active">Descripcion</label>
+                <input formControlName = "descripcion" type="text" name="descripcion" required>
+            </div>
+
+            <div class="input-field">
+                <label for="precio"class="active">Precio</label>
+                <input formControlName = "precio" type="text" name="precio" required>
+            </div>
+
+            
+            <p class="center-aling">
+                <button [disabled]="!fgvalidador.valid" class="wavs-effect waves-light btn" type="submit"><i
+                        class="material-icon right">send</i>Enviar</button>
+            </p>
+
+
+        </form>
+    </article>
+</div>

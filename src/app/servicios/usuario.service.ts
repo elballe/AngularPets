@@ -29,7 +29,7 @@ export class UsuarioService {
   }
 
   ActualizarUsuarioPorId(id: string, usuario: ModeloUsuario): Observable<ModeloUsuario>{
-    return this.http.put<ModeloUsuario>(`${this.url}/usuarios/${id}`, usuario, {
+    return this.http.patch<ModeloUsuario>(`${this.url}/usuarios/${id}`, usuario, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
