@@ -1,9 +1,15 @@
-<a routerLink="/administracion/crear-producto" class="btn">nuevo producto</a>
-<table class="table responsive">
-    <thead>
+<br>
+<br>
+<button class="btn btn-primary col-2 offset-1" routerLink="/administracion/crear-producto">Crear nuevo producto</button>
+<br>
+<table class="table responsive striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 id
+            </th>
+            <th>
+                Foto
             </th>
             <th>
                 tipo
@@ -17,12 +23,21 @@
             <th>
                 precio
             </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Borrar
+            </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p for listadoRegistros">
+        <tr *ngFor="let p of listadoRegistros">
             <td>
                 {{p.id}}
+            </td>
+            <td>
+                <img src={{p.foto}} class="imagenMascota" />
             </td>
             <td>
                 {{p.tipo}}
@@ -37,8 +52,14 @@
                 {{p.precio}}
             </td>
             <td>
-                <a routerLink="/administracion/editar-producto/{{p.id}}"></a>
+                <button class="btn btn-warning bi bi-pencil-square " routerLink="/administracion/editar-producto/{{p.id}}"></button>
+            </td>
+            <td>
+                <button class="btn btn-danger bi bi-trash-fill" routerLink="/administracion/eliminar-producto/{{p.id}}"></button>
+            </td>
+
         </tr>
     </tbody>
 
 </table>
+

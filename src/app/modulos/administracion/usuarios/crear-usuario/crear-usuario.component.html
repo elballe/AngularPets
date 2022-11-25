@@ -1,35 +1,52 @@
-<div class="row">
-    <h3 class="center-align">Crear Usuario</h3>
-    <article class="col s6 offset-s3">
-      <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario ()" action="">
+<div class="row " >
+    <br>
+    <br>
+    <div  class="card">
+        <br>
+        <br>
+        <h3 class="text-center">Registrar Usuario</h3>
+        <br>
+    <article class="col s6 offset-s3 text-center">
+      <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario ()" action="" class="text-center">
             <div class="input field">
-                <input formControlName="cedula" type="text" name="cedula" required>
                 <label for="cedula">Cédula</label>
+                <input formControlName="cedula" type="text" name="cedula" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="nombre" type="text" name="nombre" required>
                 <label for="nombre">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="apellido" type="text" name="apellido" required>
                 <label for="apellido">Apellido</label>
+                <input formControlName="apellido" type="text" name="apellido" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="correo" type="email" name="correo" required>
                 <label for="correo">Correo</label>
+                <input formControlName="correo" type="email" name="correo" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="telefono" type="text" name="telefono" required>
                 <label for="telefono">Telefono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+                
             </div>
-            <div class="col s12">
-                <select formControlName="rol" style="display: block;">
-                    <option value="cliente">Cliente</option>
-                    <option value="administrador">Admin</option>
-                    <option value="administrador">Asesor</option>
+            <div class="text-center" *ngIf="rol == 'administrador'">
+                <label for="Rol">Rol</label>
+                <select formControlName="rol" class="form-control-lg" aria-placeholder="seleccione">
+                    <option value="cliente" [selected]="true">cliente</option>
+                    <option value="administrador">administrador</option>
+                    <option value="asesor">Asesor</option>
                 </select>
             </div>
+            <br>
+            <br>
             <button [disabled]="fgValidador.invalid" class="btn btn-primary" type="submit">Crear</button>
+            <br>
+            <br>
         </form>
     </article>
+</div>
 </div>

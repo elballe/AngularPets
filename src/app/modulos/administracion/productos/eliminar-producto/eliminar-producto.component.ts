@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { productoService } from 'src/app/servicios/producto.service';
 
 @Component({
   selector: 'app-eliminar-producto',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarProductoComponent implements OnInit {
 
-  constructor() { }
+  id: string = "";
+
+  constructor(private productoService : productoService,
+    private router : Router,
+    private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params["id"];
+  }
+
+  Eliminarproducto(){
+    this.productoService.Eliminarproducto(this.id).subscribe(
+      (datos)=>{
+        alert("Registro eliminado correctamente");
+        this.router.navigate(["/administracion/buscar-producto"]);
+      },
+      (error) =>{
+        alert("Error elmininando el registro");
+      }
+    )
   }
 
 }
+

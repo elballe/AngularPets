@@ -25,16 +25,16 @@ this.token = this.seguridadServicio.ObtenerToken();
    }
 
   ObtenerRegistros(): Observable<Modeloproducto[]>{
-    return this.http.get<Modeloproducto[]>(`${this.url}/producto`);
+    return this.http.get<Modeloproducto[]>(`${this.url}/producto-servicios`);
   }
 
   ObtenerRegistrosPorId(id: string): Observable<Modeloproducto>{
-    return this.http.get<Modeloproducto>(`${this.url}/producto/${id}`);
+    return this.http.get<Modeloproducto>(`${this.url}/producto-servicios/${id}`);
   }
    
    
   crearproducto(producto: Modeloproducto): Observable<Modeloproducto>{
-    return this. http.post<Modeloproducto>(`${this.url}/producto`, producto, {
+    return this. http.post<Modeloproducto>(`${this.url}/producto-servicios`, producto, {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
        })
@@ -44,7 +44,7 @@ this.token = this.seguridadServicio.ObtenerToken();
 
    
   Actualizarproducto(producto: Modeloproducto): Observable<Modeloproducto>{
-    return this. http.put<Modeloproducto>(`${this.url}/producto/${producto.id}`, producto, {
+    return this. http.put<Modeloproducto>(`${this.url}/producto-servicios/${producto.id}`, producto, {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
        })
@@ -53,7 +53,7 @@ this.token = this.seguridadServicio.ObtenerToken();
    }
 
     Eliminarproducto(id: string): Observable<any>{
-    return this.http.delete(`${this.url}/producto/${id}`, {
+    return this.http.delete(`${this.url}/producto-servicios/${id}`, {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
        })

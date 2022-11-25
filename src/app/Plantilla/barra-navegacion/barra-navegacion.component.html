@@ -19,13 +19,16 @@
                         <a class="nav-link click-scroll" href="#top">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll"  routerLink="/administracion/buscar-usuario">Usuarios</a>
+                        <a class="nav-link click-scroll" *ngIf="rol == 'administrador'"  routerLink="/administracion/buscar-usuario">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll"  routerLink="/administracion/buscar-mascota">Mascotas</a>
+                        <a class="nav-link click-scroll" *ngIf="rol == 'cliente'"  routerLink="/administracion/crear-mascota">Afilia tu mascota</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll"  routerLink="/administracion/buscar-producto">Productos</a>
+                        <a class="nav-link click-scroll" *ngIf="rol == 'administrador'" routerLink="/administracion/buscar-mascota">Mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" *ngIf="rol == 'administrador'" routerLink="/administracion/buscar-producto">Productos</a>
                     </li>
                     
 
@@ -62,7 +65,7 @@
                     <li class="nav-item ms-3">
                         <div class="container" *ngIf="!seInicioSesion">
 
-                            <a class="nav-link custom-btn custom-border-btn btn" router="#ventanaRegistrarse" data-bs-toggle="modal">Registrarse</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" routerLink="/administracion/crear-usuario" data-bs-toggle="modal">Registrarse</a>
 
                             <!--INICIO FORMULARIO INICIAR REGISTRARSE - MUDULO
                                 <div class="modal fade" id="ventanaRegistrarse">

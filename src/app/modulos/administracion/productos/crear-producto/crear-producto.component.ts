@@ -11,7 +11,7 @@ import { productoService } from 'src/app/servicios/producto.service';
 export class CrearProductoComponent implements OnInit {
 
   fgvalidador: FormGroup = this.fb.group({
-    'id': ['', [Validators.required]],
+
     'tipo': ['', [Validators.required]],
     'nombre': ['', [Validators.required]],
     'descripcion': ['', [Validators.required]],

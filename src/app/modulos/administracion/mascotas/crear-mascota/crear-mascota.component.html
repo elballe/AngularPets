@@ -1,58 +1,57 @@
-<div class="row">
-    <h3 class="center-aling">Crear Mascota</h3>
-    <article class="col s6 offset-s3">
-        <form [formGroup]="fgvalidador" (ngSubmit)="Guardarmascota()" method="POST" action="formulario-contacto.php">
-           
-            <div class="input-field">
-                <label for="nombre">Nombre</label>
-                <input formControlName="nombre" type="text" name="nombre" required>
-            </div>
+<div class="row " >
+    <br>
+    <br>
+    <div  class="card">
+        <br>
+        <br>
+        <h3 class="text-center">Afiliar Mascota</h3>
+        <br>
+    <article class="col s6 offset-s3 text-center">
+      <form [formGroup]="fgvalidador" (ngSubmit)="Guardarmascota ()" action="" class="text-center">
+        <div class="input-field">
+            <label for="nombre">Nombre</label>
+            <input formControlName="nombre" type="text" name="nombre" required>
+        </div>
 
-            <div class="input-field">
-                <label for="foto">foto</label>
-                <input formControlName="foto" type="text" name="foto" required>
-            </div>
+        <div class="input-field">
+            <label for="foto">foto</label>
+            <input formControlName="foto" type="text" name="foto" required>
+        </div>
 
-            <div class="input-field">
-                <label for="estado">Estado</label>
-                <input formControlName="estado" type="text" name="estado" required>
-            </div>
+        <div class="input-field">
+            <label for="estado">Estado</label>
+            <input formControlName="estado" type="text" name="estado" required>
+        </div>
 
-            <div class="input-field">
-                <label for="especie">Especie</label>
-                <input formControlName="especie" type="text" name="especie" required>
-            </div>
+        <div class="input-field">
+            <label for="especie">Especie</label>
+            <input formControlName="especie" type="text" name="especie" required>
+        </div>
 
-            <div class="input-field">
-                <label for="comentario">Comentario</label>
-                <input formControlName="comentario" type="text" name="comentario" required>
-            </div>
+        <div class="input-field">
+            <label for="comentario">Comentario</label>
+            <input formControlName="comentario" type="text" name="comentario" required>
+        </div>
 
-            <div class="input-field">
-                <label for="usuarioId">UsuarioId</label>
-                <input formControlName="usuarioId" type="text" name="usuarioId" required>
-            </div>
+        <div class="input-field">
+            <label for="usuarioId">UsuarioId</label>
+            <input formControlName="usuarioId" type="text" name="usuarioId" required>
+        </div>
 
-            <div class="input-field">
-                <label for="planId">PlanId</label>
-                <input formControlName="planId" type="text" name="planId" required>
-            </div>
-
-            <div class="col s12">
-                <label for="estadoAfiliacion">Estado de afiliacion</label>
-                <select formControlName="estadoAfiliacion" style="display: block;">
-                    <option value="pendiente">Pendiente</option>
-                    <option value="aprobada">Aprobada</option>
-                    <option value="rechazada">Rechazada</option>
-                </select>
-            </div>
-
-            <p class="center-aling">
-                <button  class="wavs-effect waves-light btn" type="submit"><i
-                        class="material-icon right">send</i>Enviar</button>
-            </p>
+        <div class="input-field">
+            <label for="planId">PlanId</label>
+            <input formControlName="planId" type="text" name="planId" required>
+        </div>
 
 
+            <br>
+            <br>
+            <button [disabled]="fgvalidador.invalid" class="btn btn-primary" type="submit">Crear</button>
+            <br>
+            <br>
         </form>
     </article>
 </div>
+</div>
+
+

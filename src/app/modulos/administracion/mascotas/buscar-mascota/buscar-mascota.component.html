@@ -1,36 +1,41 @@
-<a routerLink="/administracion/crear-mascota" class="button">nueva mascota</a>
-<table class="table responsive">
-    <thead>
+<br>
+<button class="btn btn-primary col-2 offset-1" routerLink="/administracion/crear-mascota">Afiliar nueva mascota</button>
+<table class="table responsive striped">
+    <thead class="thead-dark">
         <tr>
+            <tr>
+                <th>
+                    id
+                </th>
+                <th>
+                    nombre
+                </th>
+                <th>
+                    foto
+                </th>
+                <th>
+                    estado
+                </th>
+                <th>
+                    especie
+                </th>
+                <th>
+                    comentario
+                </th>
+                <th>
+                    usuarioId
+                </th>
+                <th>
+                    planId
+                </th>
+                <th>
+                    estadoAfiliacion
+                </th>
             <th>
-                id
+                Editar
             </th>
             <th>
-                nombre
-            </th>
-            <th>
-                foto
-            </th>
-            <th>
-                estado
-            </th>
-            <th>
-                especie
-            </th>
-            <th>
-                comentario
-            </th>
-            <th>
-                usuarioId
-            </th>
-            <th>
-                planId
-            </th>
-            <th>
-                estadoAfiliacion
-            </th>
-            <th>
-                editar
+                Borrar
             </th>
         </tr>
     </thead>
@@ -63,9 +68,14 @@
             <td>
                 {{p.estadoAfiliacion}}
             </td>
+            
             <td>
-                <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn">editar mascota</a>>
+                <button class="btn btn-warning bi bi-pencil-square " routerLink="/administracion/editar-mascota/{{p.id}}"></button>
             </td>
+            <td>
+                <button class="btn btn-danger bi bi-trash-fill" routerLink="/administracion/eliminar-mascota/{{p.id}}"></button>
+            </td>
+
         </tr>
     </tbody>
 

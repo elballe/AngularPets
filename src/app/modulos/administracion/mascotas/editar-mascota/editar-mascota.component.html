@@ -1,8 +1,13 @@
+<br>
+<br>
 <div class="row">
-    <h3 class="center-aling">Crear Productos</h3>
-    <article class="col s6 offset-s3">
-        <form [formGroup]="fgvalidador" (ngSubmit)="Editarmascota()" method="POST" action="formulario-contacto.php">
-            <input type="hidden" formControlName="id" />
+    <br>
+    <h3 class="text-center">Editar Mascota</h3>
+    <br>
+    <br>
+    <article class="col s6 offset-s3 text-center">
+      <form class="text-center" [formGroup]="fgvalidador" (ngSubmit)="Editarmascota ()" action="">
+            <input type="hidden" formControlName = "id">
             <div class="input-field">
                 <label for="nombre" class="active">Nombre</label>
                 <input formControlName="nombre" type="text" name="nombre" required>
@@ -35,15 +40,19 @@
 
             <div class="input-field">
                 <label for="planId" class="active">PlanId</label>
-                <input formControlName="planid" type="text" name="planId" required>
+                <input formControlName="planId" type="text" name="planId" required>
             </div>
 
-            <p class="center-aling">
-                <button [disabled]="!fgvalidador.valid" class="wavs-effect waves-light btn" type="submit"><i
-                        class="material-icon right">send</i>Enviar</button>
-            </p>
+            <div class="input-field">
+                <label for="estadoAfiliacion" class="active">Estado de afiliación</label>
+                <input formControlName="estadoAfiliacion" type="text" name="estadoAfiliacion" required>
+            </div>
 
-
+            <br>
+            <br>
+            <button [disabled]="fgvalidador.invalid" class="btn btn-warning" type="submit">Actualizar</button>
         </form>
     </article>
 </div>
+<br>
+<br>

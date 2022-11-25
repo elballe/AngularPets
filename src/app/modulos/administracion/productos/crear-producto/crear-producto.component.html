@@ -1,36 +1,38 @@
-<div class="row">
-    <h3 class="center-aling">Crear Productos</h3>
-    <article class="col s6 offset-s3">
-        <form [formGroup]="fgvalidador" (ngSubmit)="Guardarproducto()" method="POST" action="formulario-contacto.php">
-           
+<div class="row " >
+    <br>
+    <br>
+    <div  class="card">
+        <br>
+        <br>
+        <h3 class="text-center">Registrar Producto</h3>
+        <br>
+    <article class="col s6 offset-s3 text-center">
+      <form [formGroup]="fgvalidador" (ngSubmit)="Guardarproducto ()" action="" class="text-center">
+        <div class="input-field">
+            <label for="tipo">Tipo</label>
+            <input formControlName = "tipo" type="text" name="tipo" required>
+        </div>
 
-            <div class="input-field">
-                <label for="tipo">Tipo</label>
-                <input formControlName = "tipo" type="text" name="tipo" required>
-            </div>
+        <div class="input-field">
+            <label for="nombre">Nombre</label>
+            <input formControlName = "nombre" type="text" name="nombre" required>
+        </div>
 
-            <div class="input-field">
-                <label for="nombre">Nombre</label>
-                <input formControlName = "nombre" type="text" name="nombre" required>
-            </div>
+        <div class="form-outline mb-4">
+            <label for="descripcion">Descripcion</label>
+            <input formControlName = "descripcion" type="text" name="descripcion" required>
+        </div>
 
-            <div class="input-field">
-                <label for="descripcion">Descripcion</label>
-                <input formControlName = "descripcion" type="text" name="descripcion" required>
-            </div>
-
-            <div class="input-field">
-                <label for="precio">Precio</label>
-                <input formControlName = "precio" type="text" name="precio" required>
-            </div>
-
-            
-            <p class="center-aling">
-                <button [disabled]="!fgvalidador.valid" class="wavs-effect waves-light btn" type="submit"><i
-                        class="material-icon right">send</i>Enviar</button>
-            </p>
-
-
+        <div class="input-field">
+            <label for="precio">Precio</label>
+            <input formControlName = "precio" type="text" name="precio" required>
+        </div>
+            <br>
+            <br>
+            <button [disabled]="fgvalidador.invalid" class="btn btn-primary" type="submit">Crear</button>
+            <br>
+            <br>
         </form>
     </article>
+</div>
 </div>

@@ -1,7 +1,7 @@
 <br>
-<button class="btn" routerLink="/administracion/crear-usuario">Nuevo</button>
+<button class="btn btn-primary col-2 offset-1" routerLink="/administracion/crear-usuario">Registrar usuario</button>
 <table class="table responsive striped">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>
                 Cedula
@@ -52,9 +52,11 @@
                 {{p.rol}}
             </td>
             <td>
-                <a routerLink="/administracion/editar-usuario/{{p.id}}">Editar</a>
+                <button class="btn btn-warning bi bi-pencil-square " routerLink="/administracion/editar-usuario/{{p.id}}"></button>
             </td>
-            <td><a routerLink="/administracion/eliminar-usuario/{{p.id}}">Borrar</a></td>
+            <td>
+                <button class="btn btn-danger bi bi-trash-fill" routerLink="/administracion/eliminar-usuario/{{p.id}}"></button>
+            </td>
 
         </tr>
     </tbody>

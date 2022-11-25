@@ -1,0 +1,29 @@
+.tituloCrearUsuario{
+    margin: 10px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+label{
+    padding: 5px;
+    margin: 0px 15px;
+    align-items: left;
+}
+
+input{
+    border-radius: 5px;
+    justify-content: right;
+    align-items: right;
+}
+select{
+    border-radius: 5px;
+    justify-content: right;
+    align-items: right;
+
+}
+
+.botonCrearUsuario { 
+    color: #8bd150;
+    margin-top: 8px;
+    padding: 12px 25px;
+}

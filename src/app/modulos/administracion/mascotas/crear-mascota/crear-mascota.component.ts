@@ -20,7 +20,7 @@ export class CrearMascotaComponent implements OnInit {
     'comentario': ['', [Validators.required]],
     'usuarioId': ['', [Validators.required]],
     'planId': ['', [Validators.required]],
-    'estadoAfiliacion': ['', [Validators.required]]
+    'estadoAfiliacion': ['pendiente']
 
   });
   constructor(private fb: FormBuilder,
@@ -52,8 +52,8 @@ export class CrearMascotaComponent implements OnInit {
     p.estadoAfiliacion = estadoAfiliacion;
     
   this.serviciomascota.crearmascota(p).subscribe((datos: Modelomascota) => {
-    alert("mascota almacenada correctamente");  
-  this.router.navigate(["/administracion/listar-mascota"])
+    alert("mascota almacenada correctamente, su solicitud será revisara por uno de nuestros asesores");  
+  this.router.navigate(["/administracion/inicio"])
   }, (error:any) => {
     alert("Error almacenando la mascota");
   })

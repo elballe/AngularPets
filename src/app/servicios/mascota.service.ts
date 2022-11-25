@@ -34,7 +34,7 @@ this.token = this.seguridadServicio.ObtenerToken();
 
    
   Actualizarmascota(mascota: Modelomascota): Observable<Modelomascota>{
-    return this. http.put<Modelomascota>(`${this.url}/mascotas/${mascota.id}`, mascota, {
+    return this. http.patch<Modelomascota>(`${this.url}/mascotas/${mascota.id}`, mascota, {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
        })

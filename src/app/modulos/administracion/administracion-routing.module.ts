@@ -42,12 +42,8 @@ const routes: Routes = [
     path:'editar-mascota/:id',
     component: EditarMascotaComponent 
   },
-  {
-    path:'listar-mascota',
-    component: BuscarMascotaComponent
-  },
    {
-    path:'eliminar-mascota',
+    path:'eliminar-mascota/:id',
     component: EliminarMascotaComponent 
   },
   {
@@ -67,7 +63,7 @@ const routes: Routes = [
     component: BuscarProductoComponent
   },
   {
-    path:'eliminar-producto',
+    path:'eliminar-producto/:id',
     component: EliminarProductoComponent
   },
 

@@ -1,35 +1,49 @@
+<br>
+<br>
 <div class="row">
-    <h3 class="center-align">Editar Usuario</h3>
-    <article class="col s6 offset-s3">
-      <form [formGroup]="fgValidador" (ngSubmit)="ActualizarUsuario ()" action="">
+    <br>
+    <h3 class="text-center">Editar Usuario</h3>
+    <br>
+    <br>
+    <article class="col s6 offset-s3 text-center">
+      <form class="text-center" [formGroup]="fgValidador" (ngSubmit)="ActualizarUsuario ()" action="">
             <input type="hidden" formControlName = "id">
             <div class="input field">
-                <input formControlName="cedula" type="text" name="cedula" required>
                 <label for="cedula">Cédula</label>
+                <input formControlName="cedula" type="text" name="cedula" required>
             </div>
             <div class="input field">
-                <input formControlName="nombre" type="text" name="nombre" required>
                 <label for="nombre">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="apellido" type="text" name="apellido" required>
                 <label for="apellido">Apellido</label>
+                <input formControlName="apellido" type="text" name="apellido" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="correo" type="email" name="correo" required>
                 <label for="correo">Correo</label>
+                <input formControlName="correo" type="email" name="correo" required>
+                
             </div>
             <div class="input field">
-                <input formControlName="telefono" type="text" name="telefono" required>
                 <label for="telefono">Telefono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+                
             </div>
-            <div class="col s12">
-                <select formControlName="rol" style="display: block;">
+            <div class="text-center">
+                <label for="rol">Rol</label>
+                <select formControlName="rol" class="form-control-lg" aria-placeholder="seleccione">
                     <option value="cliente">Cliente</option>
                     <option value="administrador">Administrador</option>
                 </select>
             </div>
-            <button [disabled]="fgValidador.invalid" class="btn btn-primary" type="submit">Actualizar</button>
+            <br>
+            <br>
+            <button [disabled]="fgValidador.invalid" class="btn btn-warning" type="submit">Actualizar</button>
         </form>
     </article>
 </div>
+<br>
+<br>

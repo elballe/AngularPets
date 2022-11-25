@@ -1,9 +1,13 @@
+<br>
+<br>
 <div class="row">
-    <h3 class="center-aling">Crear Productos</h3>
-    <article class="col s6 offset-s3">
-        <form [formGroup]="fgvalidador" (ngSubmit)="Editarproducto()" method="POST" action="formulario-contacto.php">
-            <input type="hidden" formControlName="id"/>
-           
+    <br>
+    <h3 class="text-center">Editar Producto</h3>
+    <br>
+    <br>
+    <article class="col s6 offset-s3 text-center">
+      <form class="text-center" [formGroup]="fgvalidador" (ngSubmit)="Editarproducto ()" action="">
+            <input type="hidden" formControlName = "id">
             <div class="input-field">
                 <label for="tipo"class="active">Tipo</label>
                 <input formControlName = "tipo" type="text" name="tipo" required>
@@ -23,14 +27,11 @@
                 <label for="precio"class="active">Precio</label>
                 <input formControlName = "precio" type="text" name="precio" required>
             </div>
-
-            
-            <p class="center-aling">
-                <button [disabled]="!fgvalidador.valid" class="wavs-effect waves-light btn" type="submit"><i
-                        class="material-icon right">send</i>Enviar</button>
-            </p>
-
-
+            <br>
+            <br>
+            <button [disabled]="fgvalidador.invalid" class="btn btn-warning" type="submit">Actualizar</button>
         </form>
     </article>
 </div>
+<br>
+<br>
